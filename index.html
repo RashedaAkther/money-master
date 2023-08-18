@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-6xl text-center my-5">
+        <span class="text-sky-600">Money Master</span>💰
+      </h1>
+    </header>
+    <div class="flex">
+      <div class="img w-3/4 h-3/5">
+        <img src="img/Pexels Photo by Karolina Grabowska.png" alt="" />
+      </div>
+      <div class="bg-slate-100 w-2/5 text-center py-20 leading-5">
+        <h1 class="text-emerald-500 text-3xl">income</h1>
+        <br />
+        <label>income</label>
+        <input id="income-field" type="text" /> <br />
+        <h1 class="text-emerald-500 text-3xl">Expense</h1>
+        <br />
+        <label>Food </label>
+        <input id="food-field" type="number" /> <br />
+        <br />
+        <label>Rent </label>
+        <input id="rent-field" type="number" /> <br /><br />
+        <label>Cloths </label>
+        <input id="cloths-field" type="number" /><br />
+        <br />
+
+        <button
+          onclick="calculation()"
+          id="calculation"
+          class="btn btn-active btn-primary"
+        >
+          Calculate
+        </button>
+        <br />
+        <br />
+        <p onclick="totalExpense()">
+          Total Expense : <span id="total-expense">00</span>
+        </p>
+        <br />
+        <p>Balance : <span id="balance">00</span></p>
+        <br />
+
+        <label>Save</label>
+        
+        <!-- onkeyup="saveBtn()" can use this also = it will work when input put don't need btn press-->
+        <input id="save" type="number"  /> %
+        <button
+          onclick="saveBtn()"
+          id="save-btn"
+          class="btn btn-active btn-primary"
+        >
+          Save
+        </button>
+        <br />
+        <p>Saving Amount : <span id="saving-amount">00</span></p>
+        <br />
+        <p>Remaining Balance : <span id="remaining-balance">00</span></p>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
